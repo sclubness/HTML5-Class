@@ -14,9 +14,9 @@ function Game(){
         var hospitalroom1 = prompt("Hospital Room \nYou muster up enough strength to open your eyes, your left arm is in noticibly more pain than the rest of your body, you see that there's a bandage wrapped around your arm with blood seeping through. \n Get up \n Look around \n Go back to sleep").toLowerCase();
 
         if (hospitalroom1 == "get up" || hospitalroom1 == "get out of bed"){
-            alert("You struggle out of bed, each motion more painful than the last. As you look up you get another look at the room")
+            alert("You struggle out of bed, each motion more painful than the last. As you look up you get another look at the room");
             
-            HospitalroomStanding();
+                HospitalroomStanding();
 
             }
 
@@ -34,8 +34,8 @@ function Game(){
             Hospitalroom();
         }
 
-        else if (hospitalroom1 == "open nightstand" || hospitalroom1 == "open drawer"){
-            alert("You manage to get up and open the drawer, there's a potion lying in the drawer with a cork closing off the top.")
+        else if (hospitalroom1 == "open nightstand" || hospitalroom1 == "open drawer" || hospitalroom1 == "open"){
+            alert("You manage to get up and open the drawer, there's a potion lying in the drawer with a cork closing off the top.");
             
             HospitalroomStanding();
             }
@@ -56,8 +56,11 @@ function Game(){
     function Hospitalroomstanding(){
         if(Hospitalroomstanding1 == "look around" || Hospitalroomstanding1 == "look"){
 
-            var hospitalroomLook = prompt("Hospital Room\nYou notice you're in a room with plenty of sunlight coming through the window. You're lying in a bed, you can't appreciate the comfort it gives due to the pain you feel. There's a nightstand adjacent to your bed, with a note on top. \n Read Note \n Open Drawer \n");
+            var hospitalroomLook = prompt("Hospital Room\nYou notice you're in a room with plenty of sunlight coming through the window. You're standing above the bed. There's a nightstand adjacent to it, with a note on top. \n Read Note \n Open Drawer \n");
             }
+        else if (Hospitalroomstanding1 == "leave" || Hospitalroomstanding1 == "leave room" || Hospitalroomstanding1 == "enter door" || Hospitalroomstanding1 ==  "enter" || Hospitalroomstanding1 == "exit"){
+            
+        }
 
         else if (Hospitalroomstanding1 == "read note" || Hospitalroomstanding1 == "read"){
                 alert("For "+playername+"\n I hope you read this letter. This is your enemy, INPROGRESS, check the drawer, there's a potion that'll restore your wounds.")
@@ -75,7 +78,16 @@ function Game(){
 
 
     }
-}
+    
+    Hospitallobby();
+    
+    //switch(Hospitallobby){
+        //case "look" || "look around";
+            //prompt("WRITE DESCRIPTION AND OPTIONS HERE")
+    }
+    
+
+//when i do a switch this below stops working.
 document.write(pc);
 
 // This is a single line comment
@@ -147,6 +159,13 @@ This is a Multiline Comment
 //breaks keep it from playing all the ones below it immediately after
 
 //-----------------------
+//Example of array declaration (making an array)
+
+//the order of their names according to code is zero, one, two
+//var wizardNames = ["Balthazar", "Bahamut", "Jim"];
+
+
+//--------------------
 //Example of proper area
 //There can only be one else and one if, they're like parents of else if
 //If you want to go into a function just create a THINK
