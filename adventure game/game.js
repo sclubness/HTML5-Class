@@ -1,3 +1,5 @@
+//make it a sci-fi world, with a dome surrounding the sun, harvesting energy from the sun
+
 Game();
 
 function Game(){
@@ -11,7 +13,7 @@ function Game(){
     Hospitalroom();
     
     function Hospitalroom(){
-        var hospitalroom1 = prompt("Hospital Room \nYou muster up enough strength to open your eyes, your left arm is in noticibly more pain than the rest of your body, you see that there's a bandage wrapped around your arm with blood seeping through. \n Get up \n Look around \n Go back to sleep").toLowerCase();
+        var hospitalroom1 = prompt("Hospital Room \nYou muster up enough strength to open your eyes, your left arm is in noticibly more pain than the rest of your body, you see that there's a patch of light wrapped around your arm with blood seeping through. You can barely keep your eyes open, it hurts too much. \n Get up \n Look around \n Go back to sleep").toLowerCase();
 
         if (hospitalroom1 == "get up" || hospitalroom1 == "get out of bed"){
             alert("You struggle out of bed, each motion more painful than the last. As you look up you get another look at the room");
@@ -26,25 +28,25 @@ function Game(){
             }
 
         else if (hospitalroom1 == "read note" || hospitalroom1 == "read"){
-                alert("For "+playername+"\n I hope you read this letter. This is your enemy, INPROGRESS, check the drawer, there's a potion that'll restore your wounds.")
-            Hospitalroom();
+                alert("For "+playername+"\n I hope you read this letter. This is your enemy, INPROGRESS, check the drawer, there's a potion of restorative light that'll heal your wounds.")
+                    Hospitalroom();
             }
         else if (hospitalroom1 == "take note" || hospitalroom1 == "take"){
-            alert("Your fingers burn the instant they make contact with the note, you leave it on the nightstand.")
-            Hospitalroom();
+            alert("Your fingers burn the instant they make contact with the note, you leave it on the nightstand.");
+                Hospitalroom();
         }
 
         else if (hospitalroom1 == "open nightstand" || hospitalroom1 == "open drawer" || hospitalroom1 == "open"){
-            alert("You manage to get up and open the drawer, there's a potion lying in the drawer with a cork closing off the top.");
+            alert("You manage to get up and open the drawer, there's some type of concoction sitting in the drawer with a cork closing off the top.");
             
-            HospitalroomStanding();
+                HospitalroomStanding();
             }
 
         else if (hospitalroom1 == "go back to sleep" || hospitalroom1 == "sleep" || hospitalroom1 == "go to bed" || hospitalroom1 == "rest"){
                 alert("You close your eyes, almost instantly passing out from exhaustion, and dream of puppies");
             var resume = confirm("Do you wish to continue?");
             if(resume){
-                    Hospitalroom();
+                HospitalroomStanding();
                 }
             
         }
@@ -71,7 +73,8 @@ function Game(){
             Hospitalroomstanding();
         }
 
-        else if (Hospitalroomstanding1 == "open nightstand" || Hospitalroomstanding1 == "open drawer"){
+        else if (hospitalroom1 == "open nightstand" || hospitalroom1 == "open drawer" || hospitalroom1 == "open"){
+            alert("You manage to get up and open the drawer, there's some type of concoction sitting in the drawer with a cork closing off the top.");
             
 
             }
@@ -159,6 +162,12 @@ This is a Multiline Comment
 //breaks keep it from playing all the ones below it immediately after
 
 //-----------------------
+
+//a global scope/declaration is something that can be accessed at anytime and anywhere.
+//variables declared locally can only be accessed inside the variable
+//you can override global variables with local variables if they have the same name
+
+//----------------
 //Example of array declaration (making an array)
 
 //the order of their names according to code is zero, one, two
