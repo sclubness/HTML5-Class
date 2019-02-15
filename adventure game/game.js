@@ -1,67 +1,78 @@
-//make it a sci-fi world, with a dome surrounding the sun, harvesting energy from the sun
-
+//Live preview error idk how to fix it, actually turns out it works but it just won't let me load it up from brackets
+//Some certain else ifs dont work and it dont make no sense, they look exactly the same
 Game();
 
 function Game(){
 
-    alert("INPROGRESS");
+    alert("eee awh raw");
     
     var playername = prompt("What is your name?");
 
-    alert("Welcome to INPROGRESS "+ playername);
+    alert("Welcome to existence is pain, "+ playername);
     
     Hospitalroom();
     
     function Hospitalroom(){
-        var hospitalroom1 = prompt("Hospital Room \nYou muster up enough strength to open your eyes, your left arm is in noticibly more pain than the rest of your body, you see that there's a patch of light wrapped around your arm with blood seeping through. You can barely keep your eyes open, it hurts too much. \n Get up \n Look around \n Go back to sleep").toLowerCase();
+        var hospitalroom1 = prompt("Hospital Room \nYou muster up enough strength to open your eyes, your left arm is in noticibly more pain than the rest of your body, you see that there's a patch of light wrapped around your arm with blood seeping through. You can barely keep your eyes open, it hurts too much. \n Get up \n Look around \n Go back to sleep \n Leave room").toLowerCase();
 
-        if (hospitalroom1 == "get up" || hospitalroom1 == "get out of bed"){
-            alert("You struggle out of bed, each motion more painful than the last. As you look up you get another look at the room");
+        if (hospitalroom1 == "get up" || hospitalroom1 == "get out of bed"){    
+            alert("You struggle out of bed, each motion more painful than the last. Just as you're getting up a nurse comes in, looking shocked that you're standing. \nShe panics and sticking you with a syringe in the brachial artery, then everything fades to black.\nYou open your eyes after resting for a good while and get up, feeling well rested and in almost perfect condition");
             
-                HospitalroomStanding();
+                Hospitalroomstanding();
 
-            }
-
+        }
+        //linking to hospital room standing above works and idk why, maybe its because i commented out 43-57 idk
         else if(hospitalroom1 == "look around" || hospitalroom1 == "look"){
 
             var hospitalroomLook = prompt("You notice you're in a room with plenty of sunlight coming through the window. You're lying in a bed, you can't appreciate the comfort it gives due to the pain you feel. There's a nightstand adjacent to your bed, with a note on top. \n Read Note \n Open Drawer \n");
             }
 
         else if (hospitalroom1 == "read note" || hospitalroom1 == "read"){
-                alert("For "+playername+"\n I hope you read this letter. This is your enemy, INPROGRESS, check the drawer, there's a potion of restorative light that'll heal your wounds.")
+                alert("For "+playername+"\n I hope you read this letter. This is your INPROGRESS, check the drawer, there's a potion of restorative light that'll heal your wounds.")
                     Hospitalroom();
             }
         else if (hospitalroom1 == "take note" || hospitalroom1 == "take"){
             alert("Your fingers burn the instant they make contact with the note, you leave it on the nightstand.");
                 Hospitalroom();
         }
-
-        else if (hospitalroom1 == "open nightstand" || hospitalroom1 == "open drawer" || hospitalroom1 == "open"){
+        
+        else if (hospitalroom1 == "leave" || "leave room" || "get out" || "exit")
+            alert("You struggle out of bed and limp to the door.\nYou open the door and leave the room, but you are immediately stopped by a nurse who sticks something into your brachial artery, instantly putting you to sleep.\nYou wake up a while later and get out of bed, you feel extremely rested and fully restored")
+                Hospitalroomstanding();
+        
+       /* else if (Hospitalroom1 == "say" || "speak" || "talk" || "say something" || "shout" || "yell")
+            alert("Sorry, you're one of those protagonists that doesn't talk.")
+                Hospitalroom(); */
+    }
+        /*else if (hospitalroom1 == "open nightstand" || hospitalroom1 == "open drawer" || hospitalroom1 == "open"){
             alert("You manage to get up and open the drawer, there's some type of concoction sitting in the drawer with a cork closing off the top.");
             
-                HospitalroomStanding();
+                Hospitalroomstanding();
             }
-
+            
         else if (hospitalroom1 == "go back to sleep" || hospitalroom1 == "sleep" || hospitalroom1 == "go to bed" || hospitalroom1 == "rest"){
                 alert("You close your eyes, almost instantly passing out from exhaustion, and dream of puppies");
             var resume = confirm("Do you wish to continue?");
             if(resume){
-                HospitalroomStanding();
+                Hospitalroomstanding();
                 }
             
         }
-    
+        */
     }
     
-    HospitalroomStanding();
+    Hospitalroomstanding();
     
     function Hospitalroomstanding(){
+        
+        var hospitalroomLook = prompt("Hospital Room\nYou notice you're in a room with plenty of sunlight coming through the window. You're standing above the bed. There's a nightstand adjacent to it, with a note on top. \n Read Note \n Open Drawer \n");
+        
         if(Hospitalroomstanding1 == "look around" || Hospitalroomstanding1 == "look"){
-
-            var hospitalroomLook = prompt("Hospital Room\nYou notice you're in a room with plenty of sunlight coming through the window. You're standing above the bed. There's a nightstand adjacent to it, with a note on top. \n Read Note \n Open Drawer \n");
-            }
-        else if (Hospitalroomstanding1 == "leave" || Hospitalroomstanding1 == "leave room" || Hospitalroomstanding1 == "enter door" || Hospitalroomstanding1 ==  "enter" || Hospitalroomstanding1 == "exit"){
             
+            var hospitalroomLook = prompt("Hospital Room\nYou notice you're in a room with plenty of sunlight coming through the window. You're standing above the bed. There's a nightstand adjacent to it, with a note on top. \n Read Note \n Open Drawer \n");
+        }
+        else if (Hospitalroomstanding1 == "leave" || Hospitalroomstanding1 == "leave room" || Hospitalroomstanding1 == "enter door" || Hospitalroomstanding1 ==  "enter" || Hospitalroomstanding1 == "exit"){
+            //now make lobby
         }
 
         else if (Hospitalroomstanding1 == "read note" || Hospitalroomstanding1 == "read"){
@@ -87,11 +98,14 @@ function Game(){
     //switch(Hospitallobby){
         //case "look" || "look around";
             //prompt("WRITE DESCRIPTION AND OPTIONS HERE")
-    }
     
 
 //when i do a switch this below stops working.
 document.write(pc);
+
+//sci-fi world, with a dome surrounding the sun, harvesting energy
+
+
 
 // This is a single line comment
 
